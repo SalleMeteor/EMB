@@ -8,7 +8,10 @@ Template.home.helpers({
   }
 });
   
-  
+Template.home.pageVar = function (){
+	return  Session.get("currentPage");
+};
+
 $(function(){    
 	$('#containerMasonry').masonry({
 		itemSelector: '.item',

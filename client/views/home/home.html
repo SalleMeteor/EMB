@@ -1,25 +1,27 @@
 <template name="home">
+	
 
-  {{#if currentUser}}
-      {{ > dashboard}}
-  {{else}}
-  	
-  	<div class="container" style="margin-top:51px">
-		<div class="page-header">
-			<h1 style="color:#fff;">Essence Meteor Box</h1>
-			<p class="lead" style="color:#fff;">Meteor is an open-source platform for building top-quality web apps in a fraction of the time, whether you're an expert developer or just getting started.</p>
-		</div>
-
-		<div id="containerMasonry">
-			<div class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 30 }'>
-			  <div class="item boxImage"><img class="imagen" src="../img/front/img1.jpg"></div>
-			  <div class="item boxImage"><img class="imagen" src="../img/front/img2.jpg"></div>
-			  <div class="item boxImage"><img class="imagen" src="../img/front/img3.jpg"></div>
-			  <div class="item boxImage"><img class="imagen" src="../img/front/img2.jpg"></div>
+	{{#if pageVar "dashboard"}}
+		<!-- Home template -->
+		<div class="container" style="margin-top:51px">
+			<div class="page-header">
+				<h1 style="color:#fff;">Essence Meteor Box</h1>
+				<p class="lead" style="color:#fff;">Meteor is an open-source platform for building top-quality web apps in a fraction of the time, whether you're an expert developer or just getting started.</p>
+			</div>
+	
+			<div id="containerMasonry">
+				<div class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 30 }'>
+				  <div class="item boxImage"><img class="imagen" src="../img/front/img1.jpg"></div>
+				  <div class="item boxImage"><img class="imagen" src="../img/front/img2.jpg"></div>
+				  <div class="item boxImage"><img class="imagen" src="../img/front/img3.jpg"></div>
+				  <div class="item boxImage"><img class="imagen" src="../img/front/img2.jpg"></div>
+				</div>
 			</div>
 		</div>
-	</div>
+	{{else}}
+		Dashboard
+	{{/if}}
 	
-  {{/if}}
+
 
 </template>
