@@ -10,7 +10,7 @@ Template.home.helpers({
   
   
 $(function(){    
-	$('#container').masonry({
+	$('#containerMasonry').masonry({
 		itemSelector: '.item',
 		columnWidth: 30
 	});
