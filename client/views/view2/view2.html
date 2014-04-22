@@ -1,0 +1,14 @@
+<template name="view2">
+  <h1>Hello World from view2!</h1>
+  {{greeting}}
+  <input class="btn btn-success" type="button" value="Click" />
+  <br/>
+  <img src="/images/lasalle.jpg">  
+  
+  <ul>
+    {{#each contact}}
+    <li>Name: {{name}}</li>
+    {{/each}}
+  </ul>
+  
+</template>
