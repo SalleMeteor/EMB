@@ -1,7 +1,9 @@
+<template name = "dash">
+	hsuahcdsaicds
+	sdjcvijdsuvuds
+</template>
 <template name="home">
-	
-
-	{{#if pageVar "dashboard"}}
+	{{#if page "home"}}
 		<!-- Home template -->
 		<div class="container" style="margin-top:51px">
 			<div class="page-header">
@@ -9,18 +11,78 @@
 				<p class="lead" style="color:#fff;">Meteor is an open-source platform for building top-quality web apps in a fraction of the time, whether you're an expert developer or just getting started.</p>
 			</div>
 	
-			<div id="containerMasonry">
-				<div class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 30 }'>
-				  <div class="item boxImage"><img class="imagen" src="../img/front/img1.jpg"></div>
-				  <div class="item boxImage"><img class="imagen" src="../img/front/img2.jpg"></div>
-				  <div class="item boxImage"><img class="imagen" src="../img/front/img3.jpg"></div>
-				  <div class="item boxImage"><img class="imagen" src="../img/front/img2.jpg"></div>
+			<div id="container" style="margin-left:100px;">
+				{{#each box}}
+					<div class="item boxImage">
+						<img class="imagen" src="../image/{{name}}">
+						<div style="padding:10px;">{{description}}</div>
+					</div>
+				{{/each}}
+				
+					
+				<!--
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img2.jpg">
+					<div style="padding:10px;">Lamborghini Aventador! Amazing prizes this way... www.ebay.com/... #spon</div>
 				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img3.jpg">
+					<div style="padding:10px;">"If I could only win a car worth $100,000 for simply adding a cool pic to @ebayGarage! " YOU CAN RIGHT HERE... www.ebay.com/... #spon</div>
+				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img4.jpg">
+					<div style="padding:10px;"></div>
+				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img5.jpg">
+					<div style="padding:10px;"></div>
+				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img6.jpg">
+					<div style="padding:10px;"></div>
+				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img7.jpg">
+					<div style="padding:10px;"></div>
+				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img8.jpg">
+					<div style="padding:10px;"></div>
+				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img9.jpg">
+					<div style="padding:10px;">"If I could only win a car worth $100,000 for simply adding a cool pic to @ebayGarage! " YOU CAN RIGHT HERE... www.ebay.com/... #spon</div>
+				</div>
+				<div class="item boxImage">
+					<img class="imagen" src="../image/img10.jpg">
+					<div style="padding:10px;"></div>
+				</div>
+				-->
+				
 			</div>
-		</div>
-	{{else}}
-		Dashboard
-	{{/if}}
+			
+			<script type="text/javascript">
+				$(function(){ 
+					var $container = $('#container');
+					$container.imagesLoaded(function(){
+					  $container.masonry({
+					    itemSelector : '.item',
+					    columnWidth : 30,
+					    isAnimated: true
+					  });
+					});
+					    
+				});
+			</script>
+
+  
+					
+			</div> <!-- close container -->
+	{{else}} {{#if page "dashboard"}}
+	
+		{{> dashboard}}
+		
+	{{/if}}{{/if}}
 	
 
 

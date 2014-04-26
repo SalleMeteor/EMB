@@ -3,7 +3,7 @@ Template.header.events({
     // template data, if any, is available in 'this'
     if (typeof console !== 'undefined')
     
-    Session.set("currentPage", "dasboard");
+    Session.set("currentPage", "dashboard");
     
   },
   'click #home': function(){

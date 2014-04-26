@@ -1,3 +1,9 @@
+Template.home.helpers({
+  box: function() {
+    return Box.find();     
+  }
+});
+
 Template.home.created = function () {
   Session.set("currentPage", "home");
 }
@@ -7,14 +13,8 @@ Template.home.helpers({
     return Session.equals("currentPage", page);     
   }
 });
-  
-Template.home.pageVar = function (){
-	return  Session.get("currentPage");
-};
 
-$(function(){    
-	$('#containerMasonry').masonry({
-		itemSelector: '.item',
-		columnWidth: 30
-	});
-});
+
+
+
+
