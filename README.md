@@ -9,6 +9,6 @@ Packages:
   - moment
   - npm
 
-By Álex Arqués and Pere Torres
+ --- By Álex Arqués and Pere Torres ---
 
 note: There are permissions problems when uploading an image to the server after the meteor deploy (in local works correclty).
