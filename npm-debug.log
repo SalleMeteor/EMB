@@ -1,0 +1,62 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'SockJS' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ 'SockJS', null ]
+5 verbose cache add name=undefined spec="SockJS" args=["SockJS",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'SockJS',
+6 verbose parsed url   path: 'SockJS',
+6 verbose parsed url   href: 'SockJS' }
+7 silly lockFile 26f46635-SockJS SockJS
+8 verbose lock SockJS /Users/minimac/.npm/26f46635-SockJS.lock
+9 silly lockFile 26f46635-SockJS SockJS
+10 silly lockFile 26f46635-SockJS SockJS
+11 verbose addNamed [ 'SockJS', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 533f387f-SockJS SockJS@
+14 verbose lock SockJS@ /Users/minimac/.npm/533f387f-SockJS.lock
+15 silly addNameRange { name: 'SockJS', range: '*', hasData: false }
+16 verbose url raw SockJS
+17 verbose url resolving [ 'https://registry.npmjs.org/', './SockJS' ]
+18 verbose url resolved https://registry.npmjs.org/SockJS
+19 info trying registry request attempt 1 at 21:55:21
+20 http GET https://registry.npmjs.org/SockJS
+21 http 404 https://registry.npmjs.org/SockJS
+22 silly registry.get cb [ 404,
+22 silly registry.get   { date: 'Sun, 27 Apr 2014 19:55:22 GMT',
+22 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     'cache-control': 'max-age=0',
+22 silly registry.get     'content-length': '52',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     age: '0',
+22 silly registry.get     'x-served-by': 'cache-v43-ASH, cache-fra1221-FRA',
+22 silly registry.get     'x-cache': 'MISS, MISS',
+22 silly registry.get     'x-cache-hits': '0, 0',
+22 silly registry.get     'x-timer': 'S1398628521.902428389,VS0,VS47,VE55,VE100',
+22 silly registry.get     'keep-alive': 'timeout=10, max=50',
+22 silly registry.get     connection: 'Keep-Alive' } ]
+23 silly lockFile 533f387f-SockJS SockJS@
+24 silly lockFile 533f387f-SockJS SockJS@
+25 error 404 'SockJS' is not in the npm registry.
+25 error 404 You should bug the author to publish it
+25 error 404
+25 error 404 Note that you can also install from a
+25 error 404 tarball, folder, or http url, or git url.
+26 error System Darwin 13.1.0
+27 error command "node" "/usr/local/bin/npm" "install" "SockJS"
+28 error cwd /Users/minimac/Documents/EMB
+29 error node -v v0.10.26
+30 error npm -v 1.4.3
+31 error code E404
+32 verbose exit [ 1, true ]

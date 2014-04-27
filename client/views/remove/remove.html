@@ -8,7 +8,7 @@
 			<div id="container" style="margin-left:100px;width:100%;">
 				 {{#each box}}
 				 	<div id="{{_id}}" class="item boxImage">
-						<img class="imagen" src="../image/{{name}}">
+						<img class="imagen" src="{{path}}/img/{{name}}">
 						<div style="padding:10px;">{{description}}</div>
 						<div id="line"></div>
 						<button type="submit" id="btnRomove" class="btn btn-danger" href="javascript:void(0)" value="{{_id}}"><span class="glyphicon glyphicon-trash"></span></button>

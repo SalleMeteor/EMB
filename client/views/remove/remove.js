@@ -1,12 +1,10 @@
 Template.remove.helpers({
-
     box: function() {
     	return Box.find( {user: Meteor.user().username} );
     }
 });
 Template.remove.created = function () {
   Session.set("currentPage", "remove"); 
-  
 }
 
 Template.remove.events({
@@ -17,11 +15,8 @@ Template.remove.events({
 	 	
 	 	Box.remove({_id:idBox});
 	 	
-	 	
 	 	var obj = $('#'+idBox+'');
 	    $('#container').masonry('remove',obj);
-	
-	    $('#container').masonry('reloadItems');
 	    $('#container').masonry('reload');
 
 	}

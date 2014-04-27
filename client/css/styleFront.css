@@ -54,7 +54,7 @@ textarea {
     margin-bottom: 10px;
     font-size: 12px;
     color: #333333;
-    
+    min-width: 230px;
 
 }
 .modal-body {
