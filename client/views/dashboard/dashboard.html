@@ -1,23 +1,29 @@
 <template name="dashboard">
-  <div class="container" style="margin-top:51px">
 		<div class="page-header">
-			<h1 style="color:#fff;">Hello Dashboard!</h1>
+			<h1><span class="glyphicon glyphicon-tint"></span> Design your Box</h1>
 		</div>
-		
-	    <div class="upload">
-	        <input id="upload" type="file" name="upload"/>
-	    </div>
-	   
-	    <!-- {{nameImage}} -->
-	    <textarea id="description" type="text"></textarea>
-	    <br>
-	    <input id="button" class="btn btn-primary" type="button" value="Upload" />
-	    <br><br>
 	    
-	    <div id="previewImage">
-		     <img id="imagePrev" src="#" alt="Image Preview"/>
-	    </div>
+		
+		<div class="upload">
+			<input id="upload" class="btn btn-default" type="file" name="upload" value="Upload Box"/>
+		</div>
+		<br>	
+		
+		{{#if selectedImage}}
+			<div id="previewImage" class="boxImage" style="margin: 0 auto;">
+				<img id="imagePrev" class="imagen" src="#" alt="Image Preview"/>
+				<div style="padding:10px;">
+					<textarea id="description" type="text" placeholder="Write your text here..."></textarea>
+				</div>
+				<div id="line"></div>
+			</div>
+			<br>
+			<input id="button" class="btn btn-success" type="button" value="Upload Box" style="width:225px;" data-dismiss="modal"/>
+			<br>
+			<br>
+			<input id="user" type="hidden" value="{{currentUser}}" />
+		{{/if}}
+	    
 
-	</div>	
 
 </template>

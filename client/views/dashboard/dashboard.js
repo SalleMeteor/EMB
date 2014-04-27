@@ -1,5 +1,6 @@
 Template.dashboard.created = function () {
-  Session.set("currentPage", "dashboard"); 
+  //Session.set("currentPage", "dashboard"); 
+  Session.set("image", false);
   
 }
 
@@ -8,19 +9,32 @@ Template.dashboard.events({
 
 	 	var image = document.getElementById ("upload");
 	 	var description = document.getElementById("description").value;
+	 	var user = document.getElementById("user").value;
 	 	
 		Meteor.saveFile(image.files[0], image.files[0].name, description);
 		
+		var now = moment().format('MMMM Do YYYY, h:mm:ss a');
+		var user = Meteor.user().username;
+		
 		//Save to Mongodb
-		Box.insert({name: image.files[0].name, description: description });
+		Box.insert({name: image.files[0].name, description: description ,user: user ,time: now});
+
+				
+		var $boxes = $('<div class="item boxImage"><img class="imagen" src="../image/{{name}}"><div style="padding:10px;">{{description}}</div><div id="line"></div></div>');
+		$('#container').masonry( 'appended', $boxes, true );
+		$('#container').masonry('reloadItems');
+		$('#container').masonry('reload');
+		
+		Session.set("image", false);
+
 	}
 });
 
 Template.dashboard.events({
 	 'change #upload': function() {
-	 
 	 	var image = document.getElementById ("upload");
 	 	readURL(image);
+
 	}
 });
 
@@ -33,9 +47,16 @@ function readURL(input) {
         reader.onload = function (e) {
             $('#imagePrev').attr('src', e.target.result);
         }
-
+         Session.set("image", true); 
         reader.readAsDataURL(input.files[0]);
     }
+}
+Template.dashboard.selectedImage = function() {
+  if (Session.get('image') == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 Meteor.saveFile = function(blob, name, description, path, type, callback) {
@@ -62,4 +83,6 @@ Meteor.saveFile = function(blob, name, description, path, type, callback) {
 		Meteor.call('saveFile', file.currentTarget.result, name, description, path, encoding, callback);
 	}
 	fileReader[method](blob);
+	
+	
 }

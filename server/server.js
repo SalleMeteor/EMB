@@ -13,6 +13,7 @@ if (Meteor.isServer) {
 					throw (new Meteor.Error(500, 'Failed to save file.', err));
 				} else {
 					console.log('The file ' + name + ' (' + encoding + ') was saved to ' + path);
+					
 
 				}
 			});

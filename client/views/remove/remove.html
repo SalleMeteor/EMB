@@ -1,0 +1,32 @@
+<template name="remove">
+		<!-- Remove template -->
+		<div class="container contentBody">
+			<div class="page-header">
+				<p class="lead" style="color:#fff;"><span class="glyphicon glyphicon-trash"></span> Which of your box you want to delete?</p>
+			</div>
+
+			<div id="container" style="margin-left:100px;width:100%;">
+				 {{#each box}}
+				 	<div id="{{_id}}" class="item boxImage">
+						<img class="imagen" src="../image/{{name}}">
+						<div style="padding:10px;">{{description}}</div>
+						<div id="line"></div>
+						<button type="submit" id="btnRomove" class="btn btn-danger" href="javascript:void(0)" value="{{_id}}"><span class="glyphicon glyphicon-trash"></span></button>
+						
+					</div>
+					
+					<script type="text/javascript">
+						var $container = $('#container');
+						$container.imagesLoaded(function(){
+							$container.masonry({
+								itemSelector : '.item',
+								columnWidth : 30,
+								isAnimated: true
+							});
+						});
+					</script>
+				{{/each}}
+			</div>
+		
+		</div> <!-- close container -->
+</template>

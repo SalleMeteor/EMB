@@ -3,7 +3,9 @@ body{
 	left: 0px;
 	background: url("../image/bg.png");
 }
-
+textarea {
+    resize: vertical;
+}
 
 #header{
 	position: relative;
@@ -16,11 +18,7 @@ body{
 
 #logo{
 	position: relative;
-	width: 100%;
-	float: left;
-	font-size: 50px;
-	text-align: center;
-	color: #fff;
+	z-index: 99999;
 }
 
 #login{
@@ -35,49 +33,94 @@ body{
 	width: 95%;
 	margin-left: 5%;
 }
-
-#container{
-	position: relative;
-	
+.contentBody{
+	margin-top:51px; 
+	text-align:center;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2); 
+	box-shadow: 0 0 6px #000000;
+	padding-bottom: 25px;
+	min-width: 470px;
 }
-
+.page-header{
+	padding-left: 30px;
+	padding-right: 30px;
+}
 .boxImage{
 	position: relative;
 	background-color: white;
 	border-radius: 3px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.18);
+    box-shadow: 0 2px 5px #000000;
     max-width: 230px;
     margin-bottom: 10px;
     font-size: 12px;
     color: #333333;
     
 
-
 }
-
+.modal-body {
+    text-align: center;
+}
 .imagen{
 	max-width: 230px;
 	border-radius: 3px 3px 0 0;
-	
+}
+#line {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 1px;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    width: 230px;
+    z-index: 20;
+}
+#btnRomove{
+	left: 180px;
+    position: absolute;
+    top: 10px;
 }
 div.upload {
-    width: 157px;
-    height: 57px;
-    background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
+    width: 230px;
+    height: 40px;
+    background: url('../image/uploadImage.png');
+    margin: 0 auto;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 3px;
 }
-
+div.upload:hover {
+	opacity: 0.8;
+}
 div.upload input {
+ 	cursor: pointer;
     display: block !important;
-    width: 157px !important;
-    height: 57px !important;
+    height: 40px !important;
     opacity: 0 !important;
     overflow: hidden !important;
-    cursor: pointer;
+    width: 230px !important;
 }
 #footer{
 	position: relative;
 	width: 100%;
 	margin-top: 50px;
+}
+
+/*------flip 3D-----------*/
+.back, .front {
+    cursor:pointer;
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: auto;
+}
+
+.modal-body {
+    max-height: none !important;
 }
