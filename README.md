@@ -19,6 +19,7 @@ Packages
 Authors
 =======
   -Álex Arqués
+  
   -Pere Torres
 
 note: There are permissions problems when uploading an image to the server after the meteor deploy (in local works correclty).
